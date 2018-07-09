@@ -3,7 +3,6 @@ package org.ethereum.lists.cilib
 import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Parser
-import com.beust.klaxon.string
 import java.io.File
 
 fun File.toJSONArray() = (Parser().parse(this.reader()) as JsonArray<*>).map { it as JsonObject }
